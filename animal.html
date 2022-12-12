@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>200贴吧</title>
+    <link rel="stylesheet" href="static/css/luntan.css">
+</head>
+<body>
+
+    <p>温馨提示：此网站如果想要查看别人最新发送的信息需要刷新哦！</p>
+    <a href="/">返回首页</a>
+    <a href="/luntan">点我刷新</a>
+    <!-- 表单：提交留言 -->
+    <form action="/submit" method="post">
+        <p>欢迎来到200贴吧！</p>
+        <textarea name="content" cols="50" rows="10" placeholder="写入你想表达的内容……（最多120字）" required></textarea>
+        <br>
+        <p>请输入注册时的用户名和密码</p>
+        <br>
+        用户：<input type="text" name="name" required>
+        <br>
+        密码：<input type="password" name="mima" required>
+        <br>
+        <p align="right">发表在</p>
+        <select name="tag">
+            <option value="All">公共贴吧</option>
+            <option value="Tb2">TKP的贴吧</option>
+        </select>
+        <br>
+        <br>
+        <br>
+        <input type="submit" value="确认提交">
+    </form>
+
+    <!-- 展示留言 -->
+    {% for dic in t_datalist %}
+        <div class="border">
+            <!--留言人 -->
+            <p>{{dic['name']}}</p>
+            <!-- 留言内容 -->
+            <p>{{dic['content']}}</p>
+            <p align="right">{{dic['time']}}</p>
+
+        </div>
+    {% endfor %}
+</body>
+</html>

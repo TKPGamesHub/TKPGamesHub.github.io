@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>复兴贴吧-注册账号</title>
+		<link rel="stylesheet" href="static/css/sign_in.css">
+		<link rel="stylesheet" href="背景样式.css"/>
+	</head>
+	<body>
+	<!--搭建界面框架-->
+		<div class="box">
+			<div>
+				<h2>注册账号</h2>
+			</div>
+			<hr />
+			<form action="/sign_in_to">
+				<div class="form">
+					<label for="#">用户名:&nbsp;&nbsp;(昵称)</label>
+					<br />
+					<input type="text"/>
+				</div>
+				<div class="form">
+					<label for="#">真实姓名:&nbsp;&nbsp;(我们只是以此确认注册此账号是不是恶意行为)</label>
+					<br />
+					<input type="text"/>
+				</div>
+				<div class="from">
+					<label for="#">密码:</label>
+					<br />
+					<input type="password"/>
+				</div>
+				<div class="from">
+					<label for="#">确认密码:&nbsp;&nbsp;(请务必与上一栏相同)</label>
+					<br />
+					<input type="password"/>
+				</div>
+				<div class="from">
+					<label for="#">邮箱/电话号码:&nbsp;&nbsp;(没有填无)</label>
+					<br />
+					<input type="text"/>
+				</div>
+				<div class="from">
+					<label for="#">学校地址/注册秘钥:</label>
+					<textarea maxlength="100" cols="60" rows="10" placeholder="写入你的学校-班级(XX小学/中学-XX班)/或填写注册秘钥" required></textarea>
+				</div>
+				<div class="form">
+					<input class="check" type="checkbox"/>
+					<span>同意<a href="用户协议.html" target="_blank">用户协议</a></span>
+				</div>
+				<input class="zhuce" type="submit" value="注册"/>
+			</form>
+		</div>
+		<a class="back" href="主页.html" target="_self">返回首页</a>
+	</body>
+</html>
